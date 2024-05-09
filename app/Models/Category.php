@@ -15,7 +15,7 @@ class Category extends Model
         'name', 'slug', 'image'
     ];
 
-    // RELASI ONE TO MANY
+    // RELASI ONE TO MANY || CATEGORY KE POST
     public function posts()
     {
         return $this->hasMany(Post::class);

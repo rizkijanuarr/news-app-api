@@ -14,9 +14,21 @@ class Post extends Model
         'title', 'slug', 'category_id', 'user_id', 'content', 'image'
     ];
 
-    // RELASI BELONGS TO
+    // RELASI BELONGS TO || POST KE CATEGORY
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    // RLEASI BELONGS TO || POST KE USER
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // RELASI ONE TO MANY || POST KE POSTVIEW
+    public function views()
+    {
+        return $this->hasMany(PostView::class);
     }
 }

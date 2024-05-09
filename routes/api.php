@@ -59,6 +59,15 @@ Route::prefix('admin')->group(function () {
         ->middleware('permission:sliders.index|sliders.store|sliders.delete');
 
     });
+});
 
+//group route with prefix "public"
+Route::prefix('public')->group(function () {
+
+    //index categories
+    Route::get('/categories', [App\Http\Controllers\Api\Public\CategoryController::class, 'index']);
+
+    //show category
+    Route::get('/categories/{slug}', [App\Http\Controllers\Api\Public\CategoryController::class, 'show']);
 
 });

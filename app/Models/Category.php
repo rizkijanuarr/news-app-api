@@ -14,4 +14,10 @@ class Category extends Model
     protected $fillable = [
         'name', 'slug', 'image'
     ];
+
+    // RELASI ONE TO MANY
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

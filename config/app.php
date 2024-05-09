@@ -195,6 +195,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // CUSTOM
+        // KAWAN KODING FCM
+        Kawankoding\Fcm\FcmServiceProvider::class,
+
     ],
 
     /*
@@ -210,6 +214,10 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+
+        // KAWAN KODING FCM
+        'Fcm' => Kawankoding\Fcm\FcmFacade::class,
+
     ])->toArray(),
 
 ];

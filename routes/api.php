@@ -82,4 +82,7 @@ Route::prefix('public')->group(function () {
     //store image
     Route::post('/posts/storeImage', [App\Http\Controllers\Api\Public\PostController::class, 'storeImagePost']);
 
+    //index sliders
+    Route::get('/sliders', [App\Http\Controllers\Api\Public\SliderController::class, 'index']);
+
 });

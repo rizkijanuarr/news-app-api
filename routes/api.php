@@ -50,6 +50,10 @@ Route::prefix('admin')->group(function () {
         Route::apiResource('/categories', App\Http\Controllers\Api\Admin\CategoryController::class)
         ->middleware('permission:categories.index|categories.store|categories.update|categories.delete');
 
+        //Posts
+        Route::apiResource('/posts', App\Http\Controllers\Api\Admin\PostController::class)
+        ->middleware('permission:posts.index|posts.store|posts.update|posts.delete');
+
     });
 
 

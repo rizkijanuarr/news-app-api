@@ -54,6 +54,10 @@ Route::prefix('admin')->group(function () {
         Route::apiResource('/posts', App\Http\Controllers\Api\Admin\PostController::class)
         ->middleware('permission:posts.index|posts.store|posts.update|posts.delete');
 
+        //Sliders
+        Route::apiResource('/sliders', App\Http\Controllers\Api\Admin\SliderController::class, ['except' => ['create', 'show', 'update']])
+        ->middleware('permission:sliders.index|sliders.store|sliders.delete');
+
     });
 
 

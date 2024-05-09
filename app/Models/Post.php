@@ -13,4 +13,10 @@ class Post extends Model
     protected $fillable = [
         'title', 'slug', 'category_id', 'user_id', 'content', 'image'
     ];
+
+    // RELASI BELONGS TO
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
